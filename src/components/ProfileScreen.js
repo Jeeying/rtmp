@@ -8,9 +8,14 @@ class ProfileScreen extends Component {
   }
 
   render() {
+    console.log('​HomeScreen -> render -> this.props', this.props);
+    const { navigation } = this.props;
+    const name = navigation.getParam('name');
+
     return (
       <SafeAreaView>
         <Text>Page_2</Text>
+        <Text>{name}</Text>
       </SafeAreaView>
     );
   }
